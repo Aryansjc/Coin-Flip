@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flip the Coin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <video autoplay muted loop id="background-video">
+    <source src="background.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="container">
+    <header>
+      <h1>Flip The Coin 🎲</h1>
+    </header>
+
+    <main>
+      <section class="theme-selection">
+        <h2>Choose Your Coin Theme</h2>
+        <select id="theme-select">
+          <option value="heads-tails">Heads vs Tails</option>
+          <option value="ronaldo-messi">Ronaldo vs Messi</option>
+          <option value="day-night">Day vs Night</option>
+          <option value="cats-dogs">Cats vs Dogs</option>
+          <option value="sun-moon">Sun vs Moon</option>
+        </select>
+      </section>
+
+      <section class="game">
+        <h2>Flip Your Coin</h2>
+        <div class="coin-container">
+          <div class="coin" id="coin">
+            <div class="side front" id="side1-display"></div>
+            <div class="side back" id="side2-display"></div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="btn btn-primary" id="flip-coin">Flip Coin</button>
+          <button class="btn btn-secondary" id="reset-stats">Reset Stats</button>
+        </div>
+        <p id="result"></p>
+      </section>
+      <audio id="flip-sound" src="sounds/coin-flip.mp3" preload="auto"></audio>
+
+      <section class="stats">
+        <h2>Game Statistics</h2>
+        <div class="stats-grid">
+          <div class="stat">
+            <h3 id="side1-label"; color: white>Side 1</h3>
+            <p><span id="side1-count">0</span> Wins</p>
+          </div>
+          <div class="stat">
+            <h3 id="side2-label"; color: white>Side 2</h3>
+            <p><span id="side2-count">0</span> Wins</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
